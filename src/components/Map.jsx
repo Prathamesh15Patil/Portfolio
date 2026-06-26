@@ -244,181 +244,36 @@ function Map() {
                 isOpen={activeModal === 'about'}
                 onClose={() => setActiveModal(null)}
                 title="Profile Log: About Me"
-                leftContent={
-                    <div className="w-full h-full bg-zinc-800 rounded-lg flex flex-col items-start justify-center gap-4 p-6 text-slate-200">
-                        <div className="text-4xl">🎓</div>
-                        <div>
-                            <p className="font-semibold text-white">KLS Gogte Institute of Technology, Belagavi</p>
-                            <p className="text-sm text-slate-400">B.E. in Computer Science & Engineering</p>
-                            <p className="text-sm text-slate-400">CGPA: 8.89/10 | Expected 2027</p>
-                        </div>
-                        <div>
-                            <p className="font-semibold text-white">Kendriya Vidyalaya No-2, Belagavi Cantt</p>
-                            <p className="text-sm text-slate-400">Class XII: 81% | Class X: 86%</p>
-                        </div>
-                    </div>
-                }
-                rightContent={
-                    <div className="space-y-5 text-slate-200">
-                        <div>
-                            <h3 className="text-xl font-bold text-emerald-400 mb-3">Academic & Professional Snapshot</h3>
-                            <p className="text-zinc-300 leading-relaxed">A driven computer science student building interactive web and mobile experiences with a focus on real-time collaboration, scalable backends, and practical AI-enabled applications.</p>
-                        </div>
-                        <div className="rounded-2xl bg-zinc-950/90 border border-zinc-700 p-4">
-                            <p className="font-semibold text-white mb-2">Experience</p>
-                            <ul className="list-disc list-inside space-y-2 text-zinc-300">
-                                <li>Frontend Developer — College Cultural Fest Tech Team (AURA2026)</li>
-                                <li>Student Developer — College Mobile Application (Ongoing)</li>
-                            </ul>
-                        </div>
-                        <div className="rounded-2xl bg-zinc-950/90 border border-zinc-700 p-4">
-                            <p className="font-semibold text-white mb-2">Achievements</p>
-                            <ul className="list-disc list-inside space-y-2 text-zinc-300">
-                                <li>3rd Place, FantomCode National Hackathon — RVITM Bengaluru</li>
-                                <li>1st Place, HackFusion Hackathon — AGM College Hubli</li>
-                                <li>Top 5 Finalist, Build4Belagavi — ComedKares (IoT-embedded software project)</li>
-                                <li>3x Winner, Paper Presentation Competition — College Tech Fest</li>
-                            </ul>
-                        </div>
-                    </div>
-                }
+                type="about"
+                leftContent={null}
+                rightContent={null}
             />
 
             <Modal
                 isOpen={activeModal === 'skills'}
                 onClose={() => setActiveModal(null)}
                 title="Terminal: Tech Stack"
-                leftContent={
-                    <div className="space-y-4 text-slate-200">
-                        <div>
-                            <p className="text-amber-300 font-semibold">Languages</p>
-                            <p className="text-zinc-300">JavaScript, Python, Java, C</p>
-                        </div>
-                        <div>
-                            <p className="text-amber-300 font-semibold">Frontend & Real-Time</p>
-                            <p className="text-zinc-300">React.js, React Native, Socket.IO, WebRTC</p>
-                        </div>
-                        <div>
-                            <p className="text-amber-300 font-semibold">Backend & Systems</p>
-                            <p className="text-zinc-300">Node.js, REST APIs, JWT Authentication, Docker</p>
-                        </div>
-                        <div>
-                            <p className="text-amber-300 font-semibold">Databases & Tools</p>
-                            <p className="text-zinc-300">MongoDB, MySQL, Git, GitHub, Postman</p>
-                        </div>
-                    </div>
-                }
-                rightContent={
-                    <div className="space-y-5 text-slate-200">
-                        <h3 className="text-lg font-bold text-amber-400 mb-3">Project Highlights</h3>
-                        <div className="space-y-4 text-zinc-300">
-                            <div className="rounded-2xl bg-zinc-950/90 border border-zinc-700 p-4">
-                                <p className="font-semibold text-white">Code coLAB — Active Learning & Code Integrity Platform</p>
-                                <p className="text-sm text-slate-400">Stack: React.js, Node.js, Express.js, Socket.IO, Docker</p>
-                                <ul className="list-disc list-inside mt-3 space-y-1">
-                                    <li>Built a real-time collaborative coding platform with synchronized pair-programming and integrated voice communication.</li>
-                                    <li>Implemented a Docker-based sandbox execution engine with isolated containers, timeouts, and resource constraints.</li>
-                                    <li>Designed classroom workflows for assignment distribution, role-based access control, and collaborative coding sessions.</li>
-                                </ul>
-                            </div>
-                            <div className="rounded-2xl bg-zinc-950/90 border border-zinc-700 p-4">
-                                <p className="font-semibold text-white">Automated Outbound Outreach Pipeline</p>
-                                <p className="text-sm text-slate-400">Stack: Node.js, Axios, Ocean.io API, Prospeo API, Brevo API</p>
-                                <ul className="list-disc list-inside mt-3 space-y-1">
-                                    <li>Built an automation system for company discovery, contact enrichment, and email delivery.</li>
-                                    <li>Orchestrated APIs with filtering, deduplication, and metadata-driven personalization.</li>
-                                </ul>
-                            </div>
-                            <div className="rounded-2xl bg-zinc-950/90 border border-zinc-700 p-4">
-                                <p className="font-semibold text-white">AgriAssist — Smart Farming Mobile App</p>
-                                <p className="text-sm text-slate-400">Stack: React Native, Node.js, Express.js</p>
-                                <ul className="list-disc list-inside mt-3 space-y-1">
-                                    <li>Built a multilingual AI system to detect crop diseases from images and deliver localized recommendations.</li>
-                                    <li>Designed end-to-end workflows from diagnosis to remedy to product access.</li>
-                                    <li>Integrated location-based services for soil testing labs, government schemes, and regional agricultural updates.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                }
+                type="skills"
+                leftContent={null}
+                rightContent={null}
             />
 
             <Modal
                 isOpen={activeModal === 'fame'}
                 onClose={() => setActiveModal(null)}
                 title="🏆 Hall of Fame: Victories & Achievements"
-                leftContent={
-                    <div className="text-center p-4">
-                        <div className="text-5xl mb-3 animate-pulse">👑</div>
-                        <p className="text-sm font-bold text-amber-400 tracking-wider uppercase">Milestones Unlocked</p>
-                        <p className="text-xs text-zinc-500 mt-1">A timeline of proven victories</p>
-                    </div>
-                }
-                rightContent={
-                    <div className="space-y-4">
-                        <h3 className="text-lg font-bold text-yellow-400 border-b border-zinc-700 pb-2">Major Accomplishments</h3>
-                        <ul className="space-y-3 text-sm text-zinc-300">
-                            <li className="flex items-start gap-2">
-                                <span className="text-yellow-500">⭐</span>
-                                <div>
-                                    <strong className="text-white block">Hackathon Winner / Lead</strong>
-                                    Successfully engineered an innovative application under strict time limits.
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-yellow-500">⭐</span>
-                                <div>
-                                    <strong className="text-white block">Open Source Contributor</strong>
-                                    Pushed optimized code blocks and structural patches to global repos.
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-yellow-500">⭐</span>
-                                <div>
-                                    <strong className="text-white block">Academic / Professional Honors</strong>
-                                    Recognized for outstanding technical performance and architecture design.
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                }
+                type="fame"
+                leftContent={null}
+                rightContent={null}
             />
 
             <Modal
                 isOpen={activeModal === 'projects'}
                 onClose={() => setActiveModal(null)}
                 title="🏋️ The Projects Gym: Built Applications"
-                leftContent={
-                    <div className="text-center p-4">
-                        <div className="text-5xl mb-3">🛠️</div>
-                        <p className="text-sm font-bold text-cyan-400 tracking-wider uppercase">Production Deployments</p>
-                        <p className="text-xs text-zinc-500 mt-1">Interactive software implementations</p>
-                    </div>
-                }
-                rightContent={
-                    <div className="space-y-4">
-                        <h3 className="text-lg font-bold text-cyan-400 border-b border-zinc-700 pb-2">Active Showcases</h3>
-                        <div className="space-y-4 max-h-[350px] pr-2">
-                            {/* Project 1 */}
-                            <div className="bg-zinc-800/40 p-3 rounded-xl border border-zinc-700/50 hover:border-cyan-500/50 transition-colors">
-                                <h4 className="font-bold text-white text-sm flex justify-between">
-                                    <span>Project Alpha (E-Commerce Platform)</span>
-                                    <span className="text-xs text-cyan-400">Live 🔗</span>
-                                </h4>
-                                <p className="text-xs text-zinc-400 mt-1">Full-stack web application integrated with secure payment endpoints and custom webhooks.</p>
-                            </div>
-
-                            {/* Project 2 */}
-                            <div className="bg-zinc-800/40 p-3 rounded-xl border border-zinc-700/50 hover:border-cyan-500/50 transition-colors">
-                                <h4 className="font-bold text-white text-sm flex justify-between">
-                                    <span>Project Beta (Real-time Analytics Dashboard)</span>
-                                    <span className="text-xs text-zinc-400">GitHub 📁</span>
-                                </h4>
-                                <p className="text-xs text-zinc-400 mt-1">Interactive state engine parsing live operational streaming vectors through highly optimized graphs.</p>
-                            </div>
-                        </div>
-                    </div>
-                }
+                type="projects"
+                leftContent={null}
+                rightContent={null}
             />
 
 
