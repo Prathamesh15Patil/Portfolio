@@ -10,7 +10,7 @@ function Footer() {
 
     return (
         <footer className="fixed bottom-4 left-0 z-[100] pointer-events-none" style={{ width: '70%' }}>
-            <div className="relative flex items-center w-full pl-4 pr-2">
+            <div className="relative flex items-center w-full  pr-2">
 
                 {/* Left — Squirtle (overlaps the bar from the left) */}
                 <div className="pointer-events-auto flex-shrink-0 relative z-10 -mr-4">
