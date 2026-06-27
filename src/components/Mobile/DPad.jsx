@@ -30,14 +30,9 @@ export default function DPad({ onPress, onRelease }) {
     // It's a cross layout
 
     return (
-        <div 
+        <div
             id="gba-dpad"
             className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[100] animate-fade-in opacity-80 hover:opacity-100 select-none touch-none"
-            style={{ 
-                width: 'calc(3 * 3rem)', height: 'calc(3 * 3rem)',
-                // For responsive we can use regular classes for the wrapper size, 
-                // but absolute positioning works best if we fix the container size.
-            }}
         >
             <div className="relative w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48">
                 {/* Center Square (Visual only) */}

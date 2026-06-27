@@ -11,6 +11,7 @@ import Collider from "../components/Collider.jsx"
 import Character from "../components/Character.jsx"
 import Modal from "./Modal.jsx";
 import MobileControls from "../components/MobileControls.jsx";
+import Footer from "../components/Footer.jsx";
 
 function Map() {
     const logPositionPercentages = (e) => {
@@ -64,7 +65,7 @@ function Map() {
     const currentBuildingRegionRef = useRef(null);
 
     // Speed setting: how many % points the player moves per tick
-    const MOVE_SPEED = 0.1;
+    const MOVE_SPEED = typeof window !== 'undefined' && window.innerWidth < 900 ? 0.3 : 0.1;
 
     // 2. DATA MAP (Divided into hard colliders vs soft building message regions)
     const colliders = [
@@ -236,7 +237,7 @@ function Map() {
         /* CAMERA PORT LAYER: Automatically masks out overflow bars and controls the viewing context window */
         <div
             ref={cameraStageRef}
-            className='w-screen h-screen fixed inset-0 overflow-hidden bg-black'
+            className='w-screen h-screen fixed inset-0 overflow-hidden bg-black relative'
         >
             {/* ==================== CONTENT SECTIONS POPUP LAYER ==================== */}
             {/* 4. Render out the content segments mapped right here */}
@@ -368,17 +369,20 @@ function Map() {
                     message="Don't get lost in forest!"
                     debug={SHOW_COLLIDERS}
                 />
-                <MobileControls
-                    onPress={handleMobileControlPress}
-                    onRelease={handleMobileControlRelease}
-                />
-                <Collider
-                    id="forest-bottom-left"
-                    top="55.58%" left="1%" width="15%" height="20%"
-                    message="Don't get lost in forest!"
-                    debug={SHOW_COLLIDERS}
-                />
+
+                {/* id="forest-bottom-left"
+                top="55.58%" left="1%" width="15%" height="20%"
+                message="Don't get lost in forest!"
+                debug={SHOW_COLLIDERS}
+                /> */}
             </div>
+
+            <MobileControls
+                onPress={handleMobileControlPress}
+                onRelease={handleMobileControlRelease}
+            />
+
+            <Footer />
 
         </div>
     )

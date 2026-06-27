@@ -17,11 +17,10 @@ export default function ProjectsPanel() {
                         <button
                             key={project.id}
                             onClick={() => setSelectedId(project.id)}
-                            className={`w-full text-left p-2 text-[10px] border-2 rounded transition-colors ${
-                                selectedId === project.id 
-                                ? 'bg-red-200 border-red-800 font-bold' 
-                                : 'bg-white border-zinc-300 hover:bg-red-100 hover:border-red-400'
-                            }`}
+                            className={`w-full text-left p-2 text-[10px] border-2 rounded transition-colors ${selectedId === project.id
+                                    ? 'bg-red-200 border-red-800 font-bold'
+                                    : 'bg-white border-zinc-300 hover:bg-red-100 hover:border-red-400'
+                                }`}
                         >
                             <span className="inline-block w-4 text-red-800">{selectedId === project.id ? '▶' : ''}</span>
                             {project.title}
@@ -41,7 +40,7 @@ export default function ProjectsPanel() {
                             </div>
                             <div className="flex gap-2">
                                 <a href={selectedProject.github} target="_blank" rel="noreferrer" className="bg-zinc-800 text-white px-2 py-1 text-[10px] rounded border-2 border-zinc-900 hover:bg-zinc-700">GitHub</a>
-                                <a href={selectedProject.live} target="_blank" rel="noreferrer" className="bg-red-800 text-white px-2 py-1 text-[10px] rounded border-2 border-red-900 hover:bg-red-700">Live</a>
+                                {/* <a href={selectedProject.live} target="_blank" rel="noreferrer" className="bg-red-800 text-white px-2 py-1 text-[10px] rounded border-2 border-red-900 hover:bg-red-700">Live</a> */}
                             </div>
                         </div>
 
@@ -56,7 +55,7 @@ export default function ProjectsPanel() {
                         <div className="bg-zinc-100 border-2 border-zinc-300 rounded p-4 mb-4 font-sans text-sm text-zinc-800 leading-relaxed">
                             <p className="font-bold mb-2 font-pixel text-[10px] text-red-800 uppercase">Problem</p>
                             <p className="mb-4">{selectedProject.problem}</p>
-                            
+
                             <p className="font-bold mb-2 font-pixel text-[10px] text-red-800 uppercase">Solution</p>
                             <p>{selectedProject.solution}</p>
                         </div>

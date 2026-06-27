@@ -7,6 +7,15 @@
   font-style: normal;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .font-pixel {
   font-family: 'Press Start 2P', monospace;
 }

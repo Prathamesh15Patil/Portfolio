@@ -20,21 +20,6 @@ export default function AboutPanel() {
                     <p className="font-bold text-green-900 mb-1">MISSION</p>
                     <p className="text-green-800 leading-tight">{trainerData.mission}</p>
                 </div>
-
-                <div className="mt-auto w-full space-y-2 text-xs">
-                    <div className="flex justify-between border-b border-zinc-300 pb-1">
-                        <span>MONEY</span>
-                        <span>${trainerData.money}</span>
-                    </div>
-                    <div className="flex justify-between border-b border-zinc-300 pb-1">
-                        <span>POKéDEX</span>
-                        <span>{trainerData.pokedex}</span>
-                    </div>
-                    <div className="flex justify-between pb-1">
-                        <span>TIME</span>
-                        <span>{trainerData.playTime}</span>
-                    </div>
-                </div>
             </div>
 
             {/* Right Panel: 70% */}
@@ -45,7 +30,7 @@ export default function AboutPanel() {
                         {aboutData.bio}
                     </p>
                 </div>
-                
+
                 <div className="mb-6">
                     <h3 className="text-sm font-bold border-b-2 border-green-800 pb-1 mb-3 text-green-800 uppercase">Education</h3>
                     <div className="bg-zinc-100 p-3 border-2 border-zinc-300 rounded mb-2">
