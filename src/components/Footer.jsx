@@ -29,7 +29,8 @@ function Footer() {
                         <FooterActionButton
                             label="Resume"
                             href={contact.resume}
-                            download={true}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         />
                         <FooterActionButton
                             label="LinkedIn"
